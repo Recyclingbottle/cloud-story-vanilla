@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/cloud.png" type="image/x-icon" />
+    <title>뜬 구름 게시글 수정</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/edit_post.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="top-navbar">
+        <div class="navbar-left">
+          <img
+            src="./assets/cloud.png"
+            alt="홈페이지 아이콘"
+            class="navbar-icon"
+          />
+          <h1 class="navbar-title">뜬 구름</h1>
+          <h3 class="navbar-subtitle">뜬 구름 잡는 이야기의 시작</h3>
+        </div>
+        <div class="navbar-links">
+          <a href="#" class="navbar-link">회원 정보</a>
+          <a href="#" class="navbar-link">비밀번호 수정</a>
+          <a href="#" class="navbar-link">로그아웃</a>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="post-form-container">
+          <h2 class="page-title">게시글 수정</h2>
+          <p class="page-description">이미 날아가버린 구름을 잡을 수 있어요.</p>
+          <form class="post-form">
+            <div class="form-group">
+              <label for="title" class="form-label">제목</label>
+              <input
+                type="text"
+                id="title"
+                class="form-input"
+                placeholder="제목을 입력하세요"
+              />
+              <p class="helper-text hidden" id="title-helper">
+                제목을 입력하세요
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="content" class="form-label">내용</label>
+              <textarea
+                id="content"
+                class="form-input"
+                rows="10"
+                placeholder="내용을 입력하세요"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="image" class="form-label">이미지 업로드</label>
+              <input type="file" id="image" class="form-input" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="submit-button">수정하기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2024 Rebo. All rights reserved.</p>
+        <p>
+          Contact me at:
+          <a href="mailto:resuable.park@gmail.com" class="contact-link"
+            >resuable.park@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

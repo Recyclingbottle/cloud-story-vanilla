@@ -1,0 +1,163 @@
+.hidden {
+  display: none;
+}
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-navbar {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  height: 48px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.navbar-subtitle {
+  font-size: 16px;
+  color: #999;
+}
+
+.navbar-links {
+  margin-right: 3rem;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #0056b3;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-form-container {
+  width: 100%;
+}
+
+.title-icon {
+  width: 24px;
+  padding-right: 10px;
+}
+.page-title {
+  align-self: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.post-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  font-family: "Nanum Gothic", sans-serif;
+  resize: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #252227;
+}
+
+.submit-button {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #eef5ff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #b4d4ff;
+}
+
+.footer {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.contact-link {
+  color: #b4d4ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

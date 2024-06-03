@@ -88,10 +88,14 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 12px;
   font: inherit;
+  line-height: 1.5;
+  font-family: "나눔바른고딕OTF", "나눔스퀘어OTF", sans-serif;
+  color: #333;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -106,17 +110,22 @@ nav,
 section {
   display: block;
 }
+
 body {
-  line-height: 1;
+  width: 100%;
+  height: 100%;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -124,7 +133,13 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
 }

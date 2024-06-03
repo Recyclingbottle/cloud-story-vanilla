@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/cloud.png" type="image/x-icon" />
+    <title>뜬 구름</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/edit_profile.css" />
+    <script
+      src="https://kit.fontawesome.com/a7ea613acc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="top-navbar">
+        <div class="navbar-left">
+          <img
+            src="./assets/cloud.png"
+            alt="홈페이지 아이콘"
+            class="navbar-icon"
+          />
+          <h1 class="navbar-title">뜬 구름</h1>
+          <h3 class="navbar-subtitle">뜬 구름 잡는 이야기의 시작</h3>
+        </div>
+        <div class="navbar-links">
+          <a href="#" class="navbar-link">회원 정보</a>
+          <a href="#" class="navbar-link">비밀번호 수정</a>
+          <a href="#" class="navbar-link">로그아웃</a>
+        </div>
+      </div>
+      <div class="content-container">
+        <h2 class="page-title">회원 정보 수정</h2>
+        <div class="profile-img-container">
+          <label for="profile-img" class="profile-img-label">프로필 사진</label>
+          <img
+            src="./assets/default-profile.png"
+            alt="프로필 사진"
+            class="profile-img"
+          />
+          <input type="file" id="profile-img" class="img-input hidden" />
+        </div>
+        <div class="user-info">
+          <div class="email-info">
+            <label for="email" class="email-label">이메일</label>
+            <span id="email" class="email-value">hoholeo382@gmail.com</span>
+          </div>
+          <div class="nickname-info">
+            <label for="nickname" class="nickname-label">닉네임</label>
+            <input
+              type="text"
+              id="nickname"
+              class="nickname-input"
+              value="현재 닉네임"
+            />
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-update">
+              <i class="fas fa-save"></i>
+            </button>
+            <button class="btn btn-cancel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="delete-account">
+            <a href="#" class="delete-account-link">탈퇴하기</a>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2024 Rebo. All rights reserved.</p>
+        <p>
+          Contact me at:
+          <a href="mailto:resuable.park@gmail.com" class="contact-link"
+            >resuable.park@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

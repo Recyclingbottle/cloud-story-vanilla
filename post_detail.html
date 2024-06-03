@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/cloud.png" type="image/x-icon" />
+    <title>뜬 구름</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/post_detail.css" />
+    <script
+      src="https://kit.fontawesome.com/a7ea613acc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="top-navbar">
+        <div class="navbar-left">
+          <img
+            src="./assets/cloud.png"
+            alt="홈페이지 아이콘"
+            class="navbar-icon"
+          />
+          <h1 class="navbar-title">뜬 구름</h1>
+          <h3 class="navbar-subtitle">뜬 구름 잡는 이야기의 시작</h3>
+        </div>
+        <div class="navbar-links">
+          <a href="#" class="navbar-link">회원 정보</a>
+          <a href="#" class="navbar-link">비밀번호 수정</a>
+          <a href="#" class="navbar-link">로그아웃</a>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="post-detail-container">
+          <!-- 게시글 제목 | 작성 날짜 | 수정 버튼 | 삭제 버튼  -->
+          <div class="post-header">
+            <h2 class="post-title">게시글 제목</h2>
+            <div class="post-header-right">
+              <span class="post-date">2024-01-01</span>
+              <button class="post-edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="post-delete">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 작성자 프로필 이미지 | 작성자 닉네임 | 조회수 | 좋아요 | 댓글 수  -->
+          <div class="post-meta">
+            <div class="post-meta-left">
+              <img
+                src="./assets/default-profile.png"
+                alt="작성자 프로필"
+                class="author-profile"
+              />
+              <span class="post-author">작성자 닉네임</span>
+            </div>
+            <div class="post-meta-right">
+              <span class="post-views">조회수 1000</span>
+              <span class="post-likes">좋아요 50</span>
+              <span class="post-comments">댓글 수 1</span>
+            </div>
+          </div>
+          <!-- 게시글 이미지(없을 수 도 있고 있다면 하나가 최대이다.) -->
+          <div class="post-image-container">
+            <img
+              src="./images/posts/default.jpg"
+              alt="게시글 이미지"
+              class="post-image"
+            />
+          </div>
+          <!-- 게시글 본문  -->
+          <div class="post-content">
+            <p>
+              여기 게시글 내용이 들어갑니다. 게시글 내용은 여러 줄로 구성될 수
+              있으며 다양한 정보를 포함할 수 있습니다.
+            </p>
+          </div>
+          <!-- 좋아요 버튼 | 싫어요 버튼  -->
+          <div class="post-actions">
+            <button class="like-button">
+              <i class="fas fa-thumbs-up"></i>
+            </button>
+            <button class="dislike-button">
+              <i class="fas fa-thumbs-down"></i>
+            </button>
+          </div>
+          <!-- 이전글 | 게시글 목록으로 가기 버튼 | 다음 글 -->
+          <div class="navigation-buttons">
+            <button class="prev-button">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="list-button"><i class="fas fa-list"></i></button>
+            <button class="next-button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="comments-section">
+            <div class="comment-input">
+              <textarea
+                class="comment-textarea"
+                placeholder="댓글 입력..."
+              ></textarea>
+              <button class="submit-comment">
+                <i class="fas fa-comment-dots"></i>
+              </button>
+            </div>
+            <div class="comment-count">댓글 1개</div>
+            <div class="comment-list">
+              <div class="comment-item">
+                <img
+                  src="./assets/default-profile.png"
+                  alt="댓글 작성자 프로필"
+                  class="comment-author-profile"
+                />
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <span class="comment-author">딩가딩가</span>
+                    <span class="comment-date">3분 전</span>
+                    <div class="comment-actions">
+                      <button class="comment-like">
+                        <i class="fas fa-thumbs-up"></i>
+                      </button>
+                      <button class="comment-dislike">
+                        <i class="fas fa-thumbs-down"></i>
+                      </button>
+                      <button class="comment-edit">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="comment-delete">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <span class="comment-content">딩가딩가~~</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2024 Rebo. All rights reserved.</p>
+        <p>
+          Contact me at:
+          <a href="mailto:resuable.park@gmail.com" class="contact-link"
+            >resuable.park@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

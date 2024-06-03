@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/cloud.png" type="image/x-icon" />
+    <title>뜬 구름 계정 만들기</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header-container">
+        <div class="page-header">
+          <h1 class="header-title">
+            <img
+              src="./assets/cloud.png"
+              alt="뜬 구름 아이콘"
+              class="header-icon"
+            />
+            <span class="header-text"> 뜬 구름 </span>
+          </h1>
+        </div>
+      </div>
+      <main class="main-content">
+        <article class="signup-content">
+          <div class="content-section content-first">
+            <h2 class="section-title">서비스 약관에 동의해주세요</h2>
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" /> 모두 동의한다
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" /> 만 14세 이상이다
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" /> 필수 약관
+            </label>
+            <div class="terms-content">
+              <p class="terms-text">
+                <strong>서비스 이용 약관</strong><br />
+                <br />
+                본 서비스 이용 약관(이하 "약관")은 회원이 서비스를 이용함에 있어
+                준수해야 할 규칙과 조건을 설명합니다. 회원은 서비스의 사용 방법,
+                계정 생성 및 유지에 대한 조건, 사용자의 책임과 제한사항 등을
+                준수해야 합니다.
+              </p>
+              <p class="terms-text">
+                1. 회원은 서비스를 올바르게 사용하고, 타인의 권리를 침해하지
+                않아야 합니다.<br /><br />
+                2. 회원은 계정 정보를 안전하게 보관해야 하며, 계정 도용 등의
+                문제가 발생할 경우 즉시 회사에 알려야 합니다.<br /><br />
+                3. 회사는 회원이 약관을 위반할 경우 서비스 이용을 제한하거나
+                계정을 삭제할 수 있습니다.<br /><br />
+              </p>
+              <p class="terms-text">
+                <strong>개인정보 수집 및 이용 동의</strong><br /><br />
+                회사는 회원이 서비스를 이용하기 위해 필요한 최소한의 개인정보를
+                수집하고 이용합니다. 회원은 아래의 내용에 대해 동의합니다.<br /><br />
+              </p>
+              <p class="terms-text">
+                1. 개인정보 수집 목적: 서비스 제공 및 회원 관리<br /><br />
+                2. 수집하는 개인정보의 항목: 이메일, 비밀번호, 닉네임 등<br /><br />
+                3. 개인정보 보관 및 보호 방법: 회사는 회원의 개인정보를 안전하게
+                보관하며, 외부로 유출되지 않도록 최선을 다합니다.<br /><br />
+              </p>
+              <p class="terms-text">
+                <strong>선택사항</strong><br />
+                회원은 아래의 선택사항에 대해 동의 여부를 결정할 수 있습니다.<br />
+                동의하지 않아도 서비스 이용에는 제한이 없습니다.<br /><br />
+              </p>
+              <p class="terms-text">
+                1. 제3자에게 개인정보 제공 동의<br />
+                2. 마케팅 활용 동의<br />
+                3. 광고성 정보 수신 동의<br />
+              </p>
+            </div>
+            <div class="button-wrapper">
+              <button
+                class="btn btn-agree"
+                onclick="nextSection('content-first', 'content-second')"
+              >
+                동의
+              </button>
+            </div>
+          </div>
+
+          <div class="content-section content-second hidden">
+            <h2 class="section-title">아이디로 사용할 이메일을 입력해주세요</h2>
+            <div class="input-group">
+              <input
+                type="email"
+                class="input-email"
+                placeholder="이메일 입력"
+              />
+              <button class="btn btn-check-email">중복확인</button>
+            </div>
+            <p class="helper-text hidden">helper-text</p>
+            <div class="button-wrapper">
+              <button
+                class="btn btn-next"
+                onclick="nextSection('content-second', 'content-third')"
+              >
+                다음
+              </button>
+            </div>
+          </div>
+          <div class="content-section content-third hidden">
+            <h2 class="section-title">
+              로그인에 사용할 비밀번호를 등록해주세요
+            </h2>
+            <p class="input-email-disabled">example@example.com</p>
+            <input
+              type="password"
+              class="input-password"
+              placeholder="비밀번호"
+            />
+            <input
+              type="password"
+              class="input-password-confirm"
+              placeholder="비밀번호 확인"
+            />
+            <p class="helper-text hidden">helper-text</p>
+            <div class="button-wrapper">
+              <button
+                class="btn btn-next"
+                onclick="nextSection('content-third', 'content-fourth')"
+              >
+                다음
+              </button>
+            </div>
+          </div>
+          <div class="content-section content-fourth hidden">
+            <h2 class="section-title">프로필 설정</h2>
+            <div class="profile-pic-wrapper">
+              <img
+                src="./assets/default-profile.png"
+                alt="프로필 사진"
+                class="profile-pic"
+              />
+              <input type="file" class="input-file" />
+            </div>
+            <div class="input-group">
+              <input type="text" class="input-nickname" placeholder="닉네임" />
+              <button class="btn btn-check-nickname">중복확인</button>
+            </div>
+            <p class="helper-text hidden">helper-text</p>
+            <div class="button-wrapper">
+              <button class="btn btn-submit">가입하기</button>
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer class="footer">
+        <p>© 2024 Rebo. All rights reserved.</p>
+        <p>
+          Contact me at:
+          <a href="mailto:resuable.park@gmail.com" class="contact-link"
+            >resuable.park@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script>
+      function nextSection(current, next) {
+        document.querySelector(`.${current}`).classList.add("hidden");
+        document.querySelector(`.${next}`).classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

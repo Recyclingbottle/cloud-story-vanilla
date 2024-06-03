@@ -1,0 +1,117 @@
+.hidden {
+  display: none;
+}
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon {
+  height: 48px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.header-text {
+  font-size: 24px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  margin: 40px auto 42px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 40px 69px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.input-email,
+.input-password {
+  width: 440px;
+  height: 45px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+}
+
+.helper-text {
+  font-size: 14px;
+  color: red;
+  margin: 8px 0;
+}
+
+.save-options {
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links {
+  margin: 8px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.login-button {
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 20px;
+  background-color: #eef5ff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #b4d4ff;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}

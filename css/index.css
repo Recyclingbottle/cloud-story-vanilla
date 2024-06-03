@@ -52,13 +52,13 @@
 
 .navbar-link {
   font-size: 14px;
-  color: #007bff;
+  color: #6a89cc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-  color: #0056b3;
+  color: #1e3799;
 }
 
 .user-greeting {
@@ -128,13 +128,13 @@
 }
 
 .post-table th {
-  background-color: #f4f4f4;
+  background-color: #eef5ff;
   font-weight: bold;
-  color: #333;
+  color: #333333;
 }
 
 .post-table tr:hover {
-  background-color: #f1f1f1;
+  background-color: #d4e0ff;
 }
 
 .post-table td {
@@ -176,7 +176,7 @@
 .filter-button:hover,
 .search-button:hover,
 .write-button:hover {
-  background-color: #b4d4ff;
+  background-color: #d4e0ff;
 }
 
 .search-input {

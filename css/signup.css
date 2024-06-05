@@ -93,7 +93,8 @@
 .input-email,
 .input-password,
 .input-password-confirm,
-.input-nickname {
+.input-nickname,
+.input-verification-code {
   width: 100%;
   height: 45px;
   margin: 8px 0;
@@ -130,7 +131,8 @@
 }
 
 .btn-check-email,
-.btn-check-nickname {
+.btn-check-nickname,
+.btn-check-code {
   width: auto;
   padding: 10px 20px;
   margin-left: 10px;

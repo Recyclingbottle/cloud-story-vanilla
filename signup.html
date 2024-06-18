@@ -7,6 +7,12 @@
     <title>뜬 구름 계정 만들기</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/signup.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/signup.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -27,13 +33,16 @@
           <div class="content-section content-first">
             <h2 class="section-title">서비스 약관에 동의해주세요</h2>
             <label class="checkbox-label">
-              <input type="checkbox" class="checkbox" /> 모두 동의한다
+              <input type="checkbox" class="checkbox" id="agree-all" /> 모두
+              동의한다
             </label>
             <label class="checkbox-label">
-              <input type="checkbox" class="checkbox" /> 만 14세 이상이다
+              <input type="checkbox" class="checkbox" id="agree-age" /> 만 14세
+              이상이다
             </label>
             <label class="checkbox-label">
-              <input type="checkbox" class="checkbox" /> 필수 약관
+              <input type="checkbox" class="checkbox" id="agree-terms" /> 필수
+              약관, 아래 약관에 동의합니다.
             </label>
             <div class="terms-content">
               <p class="terms-text">
@@ -75,10 +84,7 @@
               </p>
             </div>
             <div class="button-wrapper">
-              <button
-                class="btn btn-agree"
-                onclick="nextSection('content-first', 'content-second')"
-              >
+              <button class="btn btn-agree first-btn-next" disabled>
                 동의
               </button>
             </div>
@@ -93,9 +99,7 @@
                 placeholder="이메일 입력"
                 id="email"
               />
-              <button class="btn btn-check-email" onclick="checkEmail()">
-                중복확인
-              </button>
+              <button class="btn btn-check-email">중복확인</button>
             </div>
             <div class="input-group hidden" id="verification-code-group">
               <input
@@ -104,19 +108,16 @@
                 placeholder="인증 코드 입력"
                 id="verification-code"
               />
-              <button
-                class="btn btn-check-code"
-                onclick="checkVerificationCode()"
-              >
-                코드 확인
-              </button>
+              <button class="btn btn-check-code">코드 확인</button>
             </div>
-            <p class="helper-text hidden" id="email-helper-text">helper-text</p>
+            <p class="email-helper-text hidden" id="email-helper-text">
+              helper-text
+            </p>
             <div class="button-wrapper">
               <button
-                class="btn btn-next hidden"
+                class="btn btn-next second-btn-next"
                 id="email-next-btn"
-                onclick="nextSection('content-second', 'content-third')"
+                disabled
               >
                 다음
               </button>
@@ -126,29 +127,29 @@
             <h2 class="section-title">
               로그인에 사용할 비밀번호를 등록해주세요
             </h2>
-            <p class="input-email-disabled" id="email-display">
-              example@example.com
-            </p>
-            <input
-              type="password"
-              class="input-password"
-              placeholder="비밀번호"
-            />
-            <input
-              type="password"
-              class="input-password-confirm"
-              placeholder="비밀번호 확인"
-            />
-            <p class="helper-text hidden">helper-text</p>
+            <p class="input-email-disabled" id="email-display"></p>
+            <div class="input-group">
+              <input
+                type="password"
+                class="input-password"
+                placeholder="비밀번호"
+              />
+              <i class="toggle-password fa fa-eye"></i>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                class="input-password-confirm"
+                placeholder="비밀번호 확인"
+              />
+              <i class="toggle-password fa fa-eye"></i>
+            </div>
+            <p class="password-helper-text hidden">helper-text</p>
             <div class="button-wrapper">
-              <button
-                class="btn btn-next"
-                onclick="nextSection('content-third', 'content-fourth')"
-              >
-                다음
-              </button>
+              <button class="btn btn-next third-btn-next" disabled>다음</button>
             </div>
           </div>
+
           <div class="content-section content-fourth hidden">
             <h2 class="section-title">프로필 설정</h2>
             <div class="profile-pic-wrapper">
@@ -180,32 +181,5 @@
         </p>
       </footer>
     </div>
-    <script>
-      function nextSection(current, next) {
-        document.querySelector(`.${current}`).classList.add("hidden");
-        document.querySelector(`.${next}`).classList.remove("hidden");
-      }
-
-      function checkEmail() {
-        const email = document.getElementById("email").value;
-        // 이메일 중복 확인 및 인증 코드 전송 로직 추가
-        // 이메일 중복 확인이 완료되면 인증 코드 입력 칸 보이기
-        document
-          .getElementById("verification-code-group")
-          .classList.remove("hidden");
-        document.getElementById("email-helper-text").classList.remove("hidden");
-        document.getElementById("email-helper-text").innerText =
-          "이메일로 인증 코드를 보냈습니다.";
-      }
-
-      function checkVerificationCode() {
-        const code = document.getElementById("verification-code").value;
-        // 인증 코드 확인 로직 추가
-        // 인증 코드가 맞다면 다음 버튼 보이기
-        document.getElementById("email-next-btn").classList.remove("hidden");
-        document.getElementById("email-helper-text").innerText =
-          "인증이 완료되었습니다.";
-      }
-    </script>
   </body>
 </html>

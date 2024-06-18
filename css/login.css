@@ -1,6 +1,7 @@
 .hidden {
   display: none;
 }
+
 .page-container {
   width: 100%;
   min-height: 100vh;
@@ -65,7 +66,8 @@
   font-size: 18px;
 }
 
-.helper-text {
+.email-helper-text,
+.password-helper-text {
   font-size: 14px;
   color: red;
   margin: 8px 0;

@@ -7,6 +7,11 @@
     <title>뜬 구름, 잡는 이야기...</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="page-container">
@@ -26,13 +31,13 @@
         <div class="form-container">
           <form class="login-form">
             <input type="email" class="input-email" placeholder="이메일" />
-            <p class="helper-text hidden">*helper-text</p>
+            <p class="email-helper-text hidden">*helper-text</p>
             <input
               type="password"
               class="input-password"
               placeholder="비밀번호"
             />
-            <p class="helper-text hidden">*helper-text</p>
+            <p class="password-helper-text hidden">*helper-text</p>
             <div class="save-options">
               <label class="save-id-label">
                 <input type="checkbox" class="save-id" /> 아이디 저장
@@ -43,7 +48,7 @@
             </div>
             <button class="login-button">로그인</button>
             <div class="links">
-              <a href="#" class="signup-link">회원가입</a> |
+              <a href="/signup.html" class="signup-link">회원가입</a> |
               <a href="#" class="find-account-link">계정 찾기</a> |
               <a href="#" class="find-password-link">비밀번호 찾기</a>
             </div>
@@ -59,6 +64,7 @@
           >
         </p>
       </footer>
+      <script src="./js/login.js"></script>
     </div>
   </body>
 </html>

@@ -144,12 +144,14 @@
 .author-profile {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .post-author,
 .post-views,
 .post-likes,
+.post-dislikes,
 .post-comments {
   font-size: 0.9rem;
   color: #333;
@@ -300,7 +302,8 @@
 .comment-author-profile {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .comment-body {
@@ -379,4 +382,37 @@
 .contact-link:hover {
   background-color: #ddd;
   text-decoration: underline;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 14%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+}
+
+.pagination-button.active {
+  background-color: #333;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination-button:disabled {
+  background-color: #f1f1f1;
+  color: #ccc;
+  cursor: not-allowed;
 }

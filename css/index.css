@@ -76,10 +76,11 @@
 }
 
 .user-profile {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
   margin: 5px 10px;
+  object-fit: cover; /* 비율을 유지하면서 요소에 맞게 자르기 */
 }
 
 .content-container {
@@ -142,11 +143,12 @@
 }
 
 .author-profile {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  border-radius: 100%;
   margin-right: 5px;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .search-container {
@@ -159,7 +161,8 @@
 
 .filter-button,
 .search-button,
-.write-button {
+.write-button,
+.pagination-button {
   height: 40px;
   padding: 0 20px;
   background-color: #eef5ff;
@@ -168,15 +171,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 700;
   margin-right: 10px;
   transition: background-color 0.3s ease;
 }
 
 .filter-button:hover,
 .search-button:hover,
-.write-button:hover {
+.write-button:hover,
+.pagination-button:hover {
   background-color: #d4e0ff;
+  font-weight: 500;
 }
 
 .search-input {
@@ -192,7 +196,10 @@
 .post-list-container {
   width: 100%;
 }
-
+.actived-btn {
+  background-color: #d4e0ff;
+  font-weight: 700;
+}
 .footer {
   font-size: 12px;
   width: 100%;
@@ -211,4 +218,8 @@
 .contact-link:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+#next-page {
+  margin-left: 10px;
 }

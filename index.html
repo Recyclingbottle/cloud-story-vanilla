@@ -11,6 +11,11 @@
       src="https://kit.fontawesome.com/a7ea613acc.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="page-container">
@@ -25,20 +30,20 @@
           <h3 class="navbar-subtitle">뜬 구름 잡는 이야기의 시작</h3>
         </div>
         <div class="navbar-links">
-          <a href="#" class="navbar-link">회원 정보</a>
-          <a href="#" class="navbar-link">비밀번호 수정</a>
-          <a href="#" class="navbar-link">로그아웃</a>
+          <a href="/edit_profile.html" class="navbar-link">회원 정보</a>
+          <a href="/edit_pw.html" class="navbar-link">비밀번호 수정</a>
+          <a id="logout" class="navbar-link">로그아웃</a>
         </div>
       </div>
       <div class="user-greeting">
-        <p>안녕하세요,</p>
+        <p>안녕하세요,&nbsp;</p>
         <div class="greeting-text">
           <img
             src="./assets/default-profile.png"
             alt="로그인 사용자 프로필 이미지"
             class="user-profile"
           />
-          <p>Rebo 님</p>
+          <p class="greeting-username">회원 님</p>
         </div>
       </div>
       <div class="content-container">
@@ -48,49 +53,15 @@
             <table class="post-table">
               <thead>
                 <tr>
-                  <th>순위</th>
-                  <th>제목</th>
-                  <th>날짜</th>
-                  <th>조회수</th>
-                  <th>좋아요수</th>
+                  <th class="post-table-header-rank">순위</th>
+                  <th class="post-table-header-title">제목</th>
+                  <th class="post-table-header-date">날짜</th>
+                  <th class="post-table-header-views">조회수</th>
+                  <th class="post-table-header-likes">좋아요</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>오늘의 인기 게시글 제목1</td>
-                  <td>2024-01-01</td>
-                  <td>5000</td>
-                  <td>300</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>오늘의 인기 게시글 제목2</td>
-                  <td>2024-01-02</td>
-                  <td>4800</td>
-                  <td>250</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>오늘의 인기 게시글 제목3</td>
-                  <td>2024-01-03</td>
-                  <td>4700</td>
-                  <td>230</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>오늘의 인기 게시글 제목4</td>
-                  <td>2024-01-04</td>
-                  <td>4600</td>
-                  <td>220</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>오늘의 인기 게시글 제목5</td>
-                  <td>2024-01-05</td>
-                  <td>4500</td>
-                  <td>210</td>
-                </tr>
+              <tbody id="today-post-table-body">
+                <!-- GET 요청 후 데이터가 여기에 들어오게됨 -->
               </tbody>
             </table>
           </div>
@@ -99,57 +70,25 @@
             <table class="post-table">
               <thead>
                 <tr>
-                  <th>순위</th>
-                  <th>제목</th>
-                  <th>날짜</th>
-                  <th>조회수</th>
-                  <th>좋아요수</th>
+                  <th class="post-table-header-rank">순위</th>
+                  <th class="post-table-header-title">제목</th>
+                  <th class="post-table-header-date">날짜</th>
+                  <th class="post-table-header-views">조회수</th>
+                  <th class="post-table-header-likes">좋아요</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>이번 주 인기 게시글 제목1</td>
-                  <td>2024-01-01</td>
-                  <td>5000</td>
-                  <td>300</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>이번 주 인기 게시글 제목2</td>
-                  <td>2024-01-02</td>
-                  <td>4800</td>
-                  <td>250</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>이번 주 인기 게시글 제목3</td>
-                  <td>2024-01-03</td>
-                  <td>4700</td>
-                  <td>230</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>이번 주 인기 게시글 제목4</td>
-                  <td>2024-01-04</td>
-                  <td>4600</td>
-                  <td>220</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>이번 주 인기 게시글 제목5</td>
-                  <td>2024-01-05</td>
-                  <td>4500</td>
-                  <td>210</td>
-                </tr>
+              <tbody id="weekly-post-table-body">
+                <!-- 여기에 GET 요청 후 게시글이 오게됨 -->
               </tbody>
             </table>
           </div>
         </div>
         <div class="search-container">
-          <button class="filter-button">최신 순</button>
-          <button class="filter-button">조회수 순</button>
-          <button class="filter-button">좋아요 순</button>
+          <button class="filter-button actived-btn" id="sort-latest">
+            최신순
+          </button>
+          <button class="filter-button" id="sort-views">조회수 순</button>
+          <button class="filter-button" id="sort-likes">좋아요 순</button>
           <input type="text" class="search-input" placeholder="검색" />
           <button class="search-button"><i class="fas fa-search"></i></button>
           <button class="write-button">
@@ -169,159 +108,15 @@
                 <th>좋아요</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>일반</td>
-                <td>게시글 제목1</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자1
-                </td>
-                <td>2024-01-01</td>
-                <td>1000</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>일반</td>
-                <td>게시글 제목2</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자2
-                </td>
-                <td>2024-01-02</td>
-                <td>900</td>
-                <td>45</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>일반</td>
-                <td>게시글 제목3</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자3
-                </td>
-                <td>2024-01-03</td>
-                <td>800</td>
-                <td>40</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>일반</td>
-                <td>게시글 제목4</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자4
-                </td>
-                <td>2024-01-04</td>
-                <td>700</td>
-                <td>35</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>일반</td>
-                <td>게시글 제목5</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자5
-                </td>
-                <td>2024-01-05</td>
-                <td>600</td>
-                <td>30</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>일반</td>
-                <td>게시글 제목6</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자6
-                </td>
-                <td>2024-01-06</td>
-                <td>500</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>일반</td>
-                <td>게시글 제목7</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자7
-                </td>
-                <td>2024-01-07</td>
-                <td>400</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>일반</td>
-                <td>게시글 제목8</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자8
-                </td>
-                <td>2024-01-08</td>
-                <td>300</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>일반</td>
-                <td>게시글 제목9</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자9
-                </td>
-                <td>2024-01-09</td>
-                <td>200</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>일반</td>
-                <td>게시글 제목10</td>
-                <td>
-                  <img
-                    class="author-profile"
-                    src="./assets/default-profile.png"
-                    alt=""
-                  />작성자10
-                </td>
-                <td>2024-01-10</td>
-                <td>100</td>
-                <td>5</td>
-              </tr>
+            <tbody id="post-table-body">
+              <!-- 데이터가 여기에 삽입 -->
             </tbody>
           </table>
+        </div>
+        <div class="pagination-container">
+          <button class="pagination-button" id="prev-page">이전</button>
+          <span id="current-page">1</span> / <span id="total-pages">1</span>
+          <button class="pagination-button" id="next-page">다음</button>
         </div>
       </div>
       <footer class="footer">
@@ -334,5 +129,6 @@
         </p>
       </footer>
     </div>
+    <script src="/js/index.js"></script>
   </body>
 </html>

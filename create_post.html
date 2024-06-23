@@ -7,6 +7,11 @@
     <title>뜬 구름 게시글 작성</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/create_post.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="page-container">
@@ -21,9 +26,9 @@
           <h3 class="navbar-subtitle">뜬 구름 잡는 이야기의 시작</h3>
         </div>
         <div class="navbar-links">
-          <a href="#" class="navbar-link">회원 정보</a>
-          <a href="#" class="navbar-link">비밀번호 수정</a>
-          <a href="#" class="navbar-link">로그아웃</a>
+          <a href="/edit_profile.html" class="navbar-link">회원 정보</a>
+          <a href="/edit_pw.html" class="navbar-link">비밀번호 수정</a>
+          <a id="logout" class="navbar-link">로그아웃</a>
         </div>
       </div>
       <div class="content-container">
@@ -56,7 +61,7 @@
             </div>
             <div class="form-group">
               <label for="image" class="form-label">이미지 업로드</label>
-              <input type="file" id="image" class="form-input" />
+              <input type="file" id="image" class="form-input" multiple />
             </div>
             <div class="form-group">
               <button type="submit" class="submit-button">등록하기</button>
@@ -74,5 +79,19 @@
         </p>
       </footer>
     </div>
+    <script>
+      $(".navbar-left").click(function () {
+        // 아이콘, 홈페이지 로고 등을 누르면 현재 페이지 재로딩
+        window.location.href = "/index.html";
+      });
+      $("#logout").click(function () {
+        // 로그아웃 시, 로컬 스토리지 유저데이터 제거
+        localStorage.removeItem("userData");
+        alert("로그아웃 되었습니다");
+        // 로그인 페이지로 이동
+        window.location.href = "/login.html";
+      });
+    </script>
+    <script src="./js/create_post.js"></script>
   </body>
 </html>

@@ -97,6 +97,9 @@
   font-weight: bold;
 }
 
+#email {
+  background-color: #f4f4f4;
+}
 .email-value,
 .password-input {
   flex: 1;

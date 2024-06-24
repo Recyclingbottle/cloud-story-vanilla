@@ -261,7 +261,8 @@
   resize: none;
 }
 
-.submit-comment {
+.submit-comment,
+.edit-comment {
   align-self: flex-end;
   height: 40px;
   padding: 0 20px;

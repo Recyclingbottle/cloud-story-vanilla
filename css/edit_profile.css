@@ -96,7 +96,8 @@
 .profile-img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .user-info {
@@ -125,6 +126,8 @@
 }
 
 .nickname-input {
+  font-size: 14px;
+  font-family: "나눔바른고딕OTF", "나눔스퀘어OTF", sans-serif;
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;

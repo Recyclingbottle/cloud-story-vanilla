@@ -40,26 +40,13 @@
         <div class="user-info">
           <div class="email-info">
             <label for="email" class="email-label">이메일</label>
-            <span id="email" class="email-value">hoholeo382@gmail.com</span>
-          </div>
-          <div class="password-info">
-            <label for="current-password" class="password-label"
-              >현재 비밀번호</label
-            >
-            <input
-              type="password"
-              id="current-password"
-              class="password-input"
-            />
+            <span id="email" class="email-value"></span>
           </div>
           <div class="password-info">
             <label for="new-password" class="password-label">새 비밀번호</label>
             <input type="password" id="new-password" class="password-input" />
           </div>
-          <div class="password-guideline">
-            비밀번호는 대문자 1개 이상 포함 소문자 1개 이상 포함, 8자 이상 32자
-            이하여야 합니다.
-          </div>
+          <span class="password-guideline"> </span>
           <div class="password-info">
             <label for="confirm-password" class="password-label"
               >새 비밀번호 확인</label
@@ -70,6 +57,7 @@
               class="password-input"
             />
           </div>
+          <span class="confirm-password-guideline"> </span>
           <div class="action-buttons">
             <button class="btn btn-update">
               <i class="fas fa-save"></i>
@@ -103,5 +91,6 @@
         window.location.href = "/login.html";
       });
     </script>
+    <script src="./js/edit_pw.js"></script>
   </body>
 </html>

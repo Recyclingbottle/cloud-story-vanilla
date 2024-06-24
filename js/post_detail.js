@@ -300,12 +300,43 @@ $(document).ready(function () {
             });
 
             $(".comment-edit").on("click", function () {
-              // 댓글 수정 로직
-              const commentId = $(this)
-                .closest(".comment-item")
-                .data("comment-id");
-              console.log("수정 로직 자리", commentId);
-              // 로컬 스토리지에 있는 이메일이랑 같은 지 확인하고 권한이 없다 표시
+              $(".submit-comment").addClass("hidden");
+              $(".edit-comment").removeClass("hidden");
+              const $commentItem = $(this).closest(".comment-item");
+              const commentId = $commentItem.data("comment-id");
+              const commentContent = $commentItem
+                .find(".comment-content")
+                .text();
+              const commentAuthor = $commentItem.find(".comment-author").text();
+              if (userData.nickname == commentAuthor) {
+                $(".comment-textarea").val(commentContent);
+                $(".edit-comment").on("click", function () {
+                  $.ajax({
+                    url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}`,
+                    method: "PUT",
+                    headers: {
+                      Authorization: `Bearer ${userData.token}`,
+                    },
+                    contentType: "application/json", // 보낼 데이터의 타입을 JSON으로 설정
+                    data: JSON.stringify({
+                      content: $(".comment-textarea").val(),
+                    }),
+                    success: function (response) {
+                      alert("댓글 수정이 완료되습니다");
+                      location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                      alert("댓글 수정에 오류가 발생하였습니다.");
+                      location.reload();
+                    },
+                  });
+
+                  $(".submit-comment").removeClass("hidden");
+                  $(".edit-comment").addClass("hidden");
+                });
+              } else {
+                alert("수정 권한이 없습니다.");
+              }
             });
 
             $(".comment-delete").on("click", function () {

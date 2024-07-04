@@ -6,7 +6,8 @@ $(document).ready(function () {
   // userData 가 존재하지 않을 경우에 대한 예외 처리
   if (!userData) {
     alert("로그인을 다시 해주시길 바랍니다.");
-    window.location.href = "/login.html";
+    // window.location.href = "/login.html";
+    window.location.href = "/index.html";
   }
 
   // 이미지 URL 링크
@@ -115,7 +116,8 @@ $(document).ready(function () {
         // 수정된 정보를 다시 저장
         userData.nickname = newNickname;
         localStorage.setItem("userData", JSON.stringify(userData));
-        window.location.href = "/index.html";
+        // window.location.href = "/index.html";
+        window.location.href = "/main.html";
       },
       error: function () {
         alert("회원 정보 수정에 실패했습니다. 다시 시도해주세요.");
@@ -124,6 +126,7 @@ $(document).ready(function () {
   }
 
   $(".btn-cancel").click(function () {
+    // window.location.href = "/index.html";
     window.location.href = "/index.html";
   });
 
@@ -142,7 +145,8 @@ $(document).ready(function () {
         success: function () {
           alert("회원 탈퇴가 완료되었습니다.");
           localStorage.removeItem("userData");
-          window.location.href = "/login.html";
+          // window.location.href = "/login.html";
+          window.location.href = "/index.html";
         },
         error: function () {
           alert("회원 탈퇴에 실패했습니다. 다시 시도해주세요.");

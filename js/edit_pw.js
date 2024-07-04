@@ -60,7 +60,8 @@ $(document).ready(function () {
         success: function () {
           alert("비밀번호가 성공적으로 변경되었습니다.");
           localStorage.removeItem("userData");
-          window.location.href = "/login.html";
+          // window.location.href = "/login.html";
+          window.location.href = "/index.html";
         },
         error: function () {
           alert("비밀번호 변경에 실패했습니다. 다시 시도해주세요.");
@@ -73,6 +74,6 @@ $(document).ready(function () {
 
   // 취소 버튼 클릭 이벤트
   $(".btn-cancel").click(function () {
-    window.location.href = "/index.html";
+    window.location.href = "/main.html";
   });
 });

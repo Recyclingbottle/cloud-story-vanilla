@@ -354,7 +354,8 @@ $(document).ready(function () {
         success: function (response) {
           if (response.success) {
             alert("회원가입이 완료되었습니다.");
-            window.location.href = "/login.html";
+            // window.location.href = "/login.html";
+            window.location.href = "/index.html";
           } else {
             alert("오류가 발생하였습니다.");
             location.reload();

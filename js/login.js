@@ -94,7 +94,8 @@ $(".login-button").click(function (event) {
         };
         localStorage.setItem("userData", JSON.stringify(userData));
         //alert("로그인 성공");
-        window.location.href = "/index.html";
+        // window.location.href = "/index.html";
+        window.location.href = "/main.html";
       } else {
         if (data.message == "Invalid email or password")
           alert("이메일과 비밀번호가 일치하지 않습니다.");

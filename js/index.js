@@ -29,7 +29,8 @@ $(document).ready(function () {
 
   if (!userData) {
     // userData가 없으면 리다이렉트
-    window.location.href = "login.html";
+    // window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -46,12 +47,14 @@ $(document).ready(function () {
     localStorage.removeItem("userData");
     alert("로그아웃 되었습니다");
     // 로그인 페이지로 이동
-    window.location.href = "/login.html";
+    // window.location.href = "/login.html";
+    window.location.href = "/index.html";
   });
 
   $(".navbar-left").click(function () {
     // 아이콘, 홈페이지 로고 등을 누르면 현재 페이지 재로딩
-    window.location.href = "/index.html";
+    // window.location.href = "/index.html";
+    window.location.href = "/main.html";
   });
 
   // 오늘의 인기글 불러오기

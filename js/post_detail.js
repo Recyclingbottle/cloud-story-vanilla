@@ -32,7 +32,8 @@ $(document).ready(function () {
 
   // 목록 버튼 누르면
   $(".list-button").on("click", function () {
-    window.location.href = "/index.html";
+    // window.location.href = "/index.html";
+    window.location.href = "/main.html";
   });
   $(".post-edit").on("click", function () {
     window.location.href = `/edit_post.html?postId=${postId}`;
@@ -48,7 +49,8 @@ $(document).ready(function () {
         },
         success: function (response) {
           alert("게시글이 삭제되었습니다.");
-          window.location.href = "/index.html";
+          // window.location.href = "/index.html";
+          window.location.href = "/main.html";
         },
         error: function (xhr, status, error) {
           alert(
@@ -56,7 +58,8 @@ $(document).ready(function () {
               xhr.responseText || error
             }`
           );
-          window.location.href = "/index.html";
+          // window.location.href = "/index.html";
+          window.location.href = "/main.html";
         },
       });
     }

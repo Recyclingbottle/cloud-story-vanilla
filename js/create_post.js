@@ -66,7 +66,8 @@ $(document).ready(function () {
       const userData = localStorage.getItem("userData");
       if (!userData) {
         alert("로그인이 필요합니다.");
-        window.location.href = "login.html";
+        // window.location.href = "login.html";
+        window.location.href = "/index.html";
         return;
       }
 
@@ -83,7 +84,8 @@ $(document).ready(function () {
         success: function (response) {
           if (response.success) {
             alert("게시글이 성공적으로 등록되었습니다.");
-            window.location.href = "index.html";
+            // window.location.href = "index.html";
+            window.location.href = "/main.html";
           } else {
             alert("게시글 등록에 실패했습니다.");
           }

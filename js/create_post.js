@@ -73,7 +73,7 @@ $(document).ready(function () {
 
       const parsedUserData = JSON.parse(userData);
       $.ajax({
-        url: "http://localhost:8080/api/posts",
+        url: "http://3.38.152.113/api/posts",
         type: "POST",
         headers: {
           Authorization: `Bearer ${parsedUserData.token}`,

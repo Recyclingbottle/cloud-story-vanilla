@@ -37,7 +37,7 @@ $(document).ready(function () {
   // userData 를 JSON 으로 파싱
   userData = JSON.parse(userData);
   // 이미지 URL 링크
-  var userProfileUrl = `http://localhost:8080/api/files${userData.profileImageUrl}`;
+  var userProfileUrl = `http://3.38.152.113/api/files${userData.profileImageUrl}`;
   $(".user-profile").attr("src", userProfileUrl);
 
   $(".greeting-username").text(userData.nickname + " 님 ");
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
   // 오늘의 인기글 불러오기
   $.ajax({
-    url: "http://localhost:8080/api/posts/popular/today",
+    url: "http://3.38.152.113/api/posts/popular/today",
     type: "GET",
     headers: {
       Authorization: "Bearer " + userData.token,
@@ -106,7 +106,7 @@ $(document).ready(function () {
 
   // 이번 주 인기글 불러오기
   $.ajax({
-    url: "http://localhost:8080/api/posts/popular/week",
+    url: "http://3.38.152.113/api/posts/popular/week",
     type: "GET",
     headers: {
       Authorization: "Bearer " + userData.token,
@@ -162,7 +162,7 @@ $(document).ready(function () {
   // 전체 게시글 가져오기 함수
   function fetchPosts(page, sort, direction) {
     $.ajax({
-      url: `http://localhost:8080/api/posts?page=${page}&limit=${limit}&sort=${sort}&direction=${direction}`,
+      url: `http://3.38.152.113/api/posts?page=${page}&limit=${limit}&sort=${sort}&direction=${direction}`,
       type: "GET",
       headers: {
         Authorization: "Bearer " + userData.token,
@@ -206,7 +206,7 @@ $(document).ready(function () {
       tr.append(`<td>일반</td>`);
       tr.append(`<td>${title}</td>`);
       tr.append(
-        `<td><img class="author-profile" src="http://localhost:8080/api/files${post.user.profilePictureUrl}" alt=""/>${post.user.nickname}</td>`
+        `<td><img class="author-profile" src="http://3.38.152.113/api/files${post.user.profilePictureUrl}" alt=""/>${post.user.nickname}</td>`
       );
       tr.append(`<td>${formattedDate}</td>`);
       tr.append(`<td>${post.viewCount}</td>`);

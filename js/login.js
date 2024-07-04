@@ -74,7 +74,7 @@ $(".login-button").click(function (event) {
     password: password,
   };
 
-  fetch("http://localhost:8080/api/users/login", {
+  fetch("http://3.38.152.113/api/users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

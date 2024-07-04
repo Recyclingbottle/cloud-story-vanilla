@@ -11,7 +11,7 @@ $(document).ready(function () {
   }
 
   // 이미지 URL 링크
-  var userProfileUrl = `http://localhost:8080/api/files${userData.profileImageUrl}`;
+  var userProfileUrl = `http://3.38.152.113/api/files${userData.profileImageUrl}`;
 
   // 프로필 이미지, 이메일, 닉네임을 초기 설정
   $(".profile-img").attr("src", userProfileUrl);
@@ -45,7 +45,7 @@ $(document).ready(function () {
     } else {
       // 닉네임 중복 확인
       $.ajax({
-        url: `http://localhost:8080/api/users/check-nickname?nickname=${newNickname}`,
+        url: `http://3.38.152.113/api/users/check-nickname?nickname=${newNickname}`,
         type: "GET",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -70,7 +70,7 @@ $(document).ready(function () {
     if (newNickname !== userData.nickname) {
       // 닉네임이 변경된 경우 중복 확인
       $.ajax({
-        url: `http://localhost:8080/api/users/check-nickname?nickname=${newNickname}`,
+        url: `http://3.38.152.113/api/users/check-nickname?nickname=${newNickname}`,
         type: "GET",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -103,7 +103,7 @@ $(document).ready(function () {
 
     // AJAX 요청
     $.ajax({
-      url: "http://localhost:8080/api/users/update",
+      url: "http://3.38.152.113/api/users/update",
       type: "PUT",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -137,7 +137,7 @@ $(document).ready(function () {
       )
     ) {
       $.ajax({
-        url: "http://localhost:8080/api/users/delete",
+        url: "http://3.38.152.113/api/users/delete",
         type: "DELETE",
         headers: {
           Authorization: `Bearer ${userData.token}`,

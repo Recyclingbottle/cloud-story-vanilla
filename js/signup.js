@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     // 이메일 중복 확인 및 인증 코드 전송 요청
     $.ajax({
-      url: "http://localhost:8080/api/users/check-email",
+      url: "http://3.38.152.113/api/users/check-email",
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify({ email: email }),
@@ -153,7 +153,7 @@ $(document).ready(function () {
 
     // 인증 코드 확인 요청
     $.ajax({
-      url: "http://localhost:8080/api/users/verify-email",
+      url: "http://3.38.152.113/api/users/verify-email",
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify({
@@ -201,7 +201,7 @@ $(document).ready(function () {
 
     // 닉네임 중복 확인 요청
     $.ajax({
-      url: `http://localhost:8080/api/users/check-nickname?nickname=${nickname}`,
+      url: `http://3.38.152.113/api/users/check-nickname?nickname=${nickname}`,
       method: "GET",
       contentType: "application/json",
       crossDomain: true,
@@ -346,7 +346,7 @@ $(document).ready(function () {
       formData.append("profileImage", $(".input-file")[0].files[0]);
 
       $.ajax({
-        url: "http://localhost:8080/api/users/register",
+        url: "http://3.38.152.113/api/users/register",
         method: "POST",
         contentType: false,
         processData: false,

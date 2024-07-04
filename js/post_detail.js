@@ -42,7 +42,7 @@ $(document).ready(function () {
     const postDeleteConfirmed = confirm("해당 게시글을 삭제하시겠습니까?");
     if (postDeleteConfirmed) {
       $.ajax({
-        url: `http://localhost:8080/api/posts/${postId}`,
+        url: `http://3.38.152.113/api/posts/${postId}`,
         type: "DELETE",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -69,7 +69,7 @@ $(document).ready(function () {
   if (postId) {
     // GET 으로 게시글 데이터 불러오기
     $.ajax({
-      url: `http://localhost:8080/api/posts/${postId}`,
+      url: `http://3.38.152.113/api/posts/${postId}`,
       method: "GET",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -84,7 +84,7 @@ $(document).ready(function () {
           $(".post-date").text(formatDate(date));
           $(".author-profile").attr(
             "src",
-            `http://localhost:8080/api/files${post.user.profilePictureUrl}`
+            `http://3.38.152.113/api/files${post.user.profilePictureUrl}`
           );
           $(".post-author").text(post.user.nickname);
           $(".post-views").text(`조회수 ${post.viewCount}`);
@@ -97,7 +97,7 @@ $(document).ready(function () {
             post.photos.forEach((photo) => {
               if (photo.url) {
                 $(".post-image-container").append(
-                  `<img src="http://localhost:8080/api/files${photo.url}" alt="게시글 이미지" class="post-image" />`
+                  `<img src="http://3.38.152.113/api/files${photo.url}" alt="게시글 이미지" class="post-image" />`
                 );
               }
             });
@@ -109,7 +109,7 @@ $(document).ready(function () {
     // 좋아요 버튼을 누르면
     $(".like-button").click(function () {
       $.ajax({
-        url: `http://localhost:8080/api/posts/${postId}/like`,
+        url: `http://3.38.152.113/api/posts/${postId}/like`,
         method: "POST",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -122,7 +122,7 @@ $(document).ready(function () {
           if (xhr.status === 409) {
             // 좋아요를 이미 눌렀으므로 취소 요청을 보냅니다.
             $.ajax({
-              url: `http://localhost:8080/api/posts/${postId}/like`,
+              url: `http://3.38.152.113/api/posts/${postId}/like`,
               method: "DELETE",
               headers: {
                 Authorization: `Bearer ${userData.token}`,
@@ -140,7 +140,7 @@ $(document).ready(function () {
     // 싫어요 버튼을 누르면, 이미 눌렀다면 취소 아니라면 싫어요
     $(".dislike-button").click(function () {
       $.ajax({
-        url: `http://localhost:8080/api/posts/${postId}/dislike`,
+        url: `http://3.38.152.113/api/posts/${postId}/dislike`,
         method: "POST",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -153,7 +153,7 @@ $(document).ready(function () {
           if (xhr.status === 409) {
             // 싫어요를 이미 눌렀으므로 취소 요청을 보냅니다.
             $.ajax({
-              url: `http://localhost:8080/api/posts/${postId}/dislike`,
+              url: `http://3.38.152.113/api/posts/${postId}/dislike`,
               method: "DELETE",
               headers: {
                 Authorization: `Bearer ${userData.token}`,
@@ -171,7 +171,7 @@ $(document).ready(function () {
     $(".submit-comment").click(function () {
       const commentContent = $(".comment-textarea").val();
       $.ajax({
-        url: `http://localhost:8080/api/posts/${postId}/comments`,
+        url: `http://3.38.152.113/api/posts/${postId}/comments`,
         method: "POST",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -187,7 +187,7 @@ $(document).ready(function () {
 
     function loadComments(postId, page = 1) {
       $.ajax({
-        url: `http://localhost:8080/api/posts/${postId}/comments?page=${page}&limit=10&sort=createdAt&direction=asc`,
+        url: `http://3.38.152.113/api/posts/${postId}/comments?page=${page}&limit=10&sort=createdAt&direction=asc`,
         method: "GET",
         headers: {
           Authorization: `Bearer ${userData.token}`,
@@ -198,7 +198,7 @@ $(document).ready(function () {
             response.comments.forEach((comment) => {
               $(".comment-list").append(`
                   <div class="comment-item" data-comment-id="${comment.id}">
-                    <img src="http://localhost:8080/api/files${
+                    <img src="http://3.38.152.113/api/files${
                       comment.user.profilePictureUrl
                     }" alt="댓글 작성자 프로필" class="comment-author-profile" />
                     <div class="comment-body">
@@ -240,7 +240,7 @@ $(document).ready(function () {
                 .data("comment-id");
               //alert(`댓글 ${commentId} 좋아요 누름`);
               $.ajax({
-                url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}/like`,
+                url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}/like`,
                 method: "POST",
                 headers: {
                   Authorization: `Bearer ${userData.token}`,
@@ -253,7 +253,7 @@ $(document).ready(function () {
                   if (xhr.status === 409) {
                     // 좋아요를 이미 눌렀으므로 취소 요청을 보냅니다.
                     $.ajax({
-                      url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}/like`,
+                      url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}/like`,
                       method: "DELETE",
                       headers: {
                         Authorization: `Bearer ${userData.token}`,
@@ -274,7 +274,7 @@ $(document).ready(function () {
                 .data("comment-id");
               //alert(`댓글 ${commentId} 싫어요 누름`);
               $.ajax({
-                url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}/dislike`,
+                url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}/dislike`,
                 method: "POST",
                 headers: {
                   Authorization: `Bearer ${userData.token}`,
@@ -287,7 +287,7 @@ $(document).ready(function () {
                   if (xhr.status === 409) {
                     // 싫어요를 이미 눌렀으므로 취소 요청을 보냅니다.
                     $.ajax({
-                      url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}/dislike`,
+                      url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}/dislike`,
                       method: "DELETE",
                       headers: {
                         Authorization: `Bearer ${userData.token}`,
@@ -315,7 +315,7 @@ $(document).ready(function () {
                 $(".comment-textarea").val(commentContent);
                 $(".edit-comment").on("click", function () {
                   $.ajax({
-                    url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}`,
+                    url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}`,
                     method: "PUT",
                     headers: {
                       Authorization: `Bearer ${userData.token}`,
@@ -351,7 +351,7 @@ $(document).ready(function () {
                 confirm("해당 댓글을 삭제하시겠습니까?");
               if (commentDeleteConfirmed) {
                 $.ajax({
-                  url: `http://localhost:8080/api/posts/${postId}/comments/${commentId}`,
+                  url: `http://3.38.152.113/api/posts/${postId}/comments/${commentId}`,
                   method: "DELETE",
                   headers: {
                     Authorization: `Bearer ${userData.token}`,

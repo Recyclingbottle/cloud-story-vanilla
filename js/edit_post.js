@@ -12,7 +12,7 @@ $(document).ready(function () {
   if (postId) {
     // GET 으로 게시글 데이터 불러오기
     $.ajax({
-      url: `http://localhost:8080/api/posts/${postId}`,
+      url: `http://3.38.152.113/api/posts/${postId}`,
       method: "GET",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -40,7 +40,7 @@ $(document).ready(function () {
       formData.append("photos", imageFile);
     }
     $.ajax({
-      url: `http://localhost:8080/api/posts/${postId}`,
+      url: `http://3.38.152.113/api/posts/${postId}`,
       method: "PUT",
       headers: {
         Authorization: `Bearer ${userData.token}`,

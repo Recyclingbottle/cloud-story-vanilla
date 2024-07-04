@@ -49,7 +49,7 @@ $(document).ready(function () {
       formData.append("user", JSON.stringify({ password: newPassword }));
 
       $.ajax({
-        url: "http://localhost:8080/api/users/update",
+        url: "http://3.38.152.113/api/users/update",
         type: "PUT",
         headers: {
           Authorization: `Bearer ${userData.token}`,

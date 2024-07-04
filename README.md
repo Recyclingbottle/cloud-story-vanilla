@@ -1,6 +1,9 @@
 # ☁️ 커뮤니티 사이트, 뜬 구름 프론트엔드
 
-- **프로젝트 배포 링크:** 배포 전
+- **프로젝트 배포 링크:**
+- https://recyclingbottle.github.io/cloud-story-vanilla/
+- 현재 EC2로 배포한 벡엔드에 SSL, https 를 하지 않아 서버와 통신이 되지 않음
+- 추후 수정 예정
 
 ## 프로젝트 소개
 

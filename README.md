@@ -4,6 +4,7 @@
 - https://recyclingbottle.github.io/cloud-story-vanilla/
 - 현재 EC2로 배포한 벡엔드에 SSL, https 를 하지 않아 서버와 통신이 되지 않음
 - 추후 수정 예정
+- [실행 영상](https://drive.google.com/file/d/1VYaWY-SrzfB9mHC-XW3EK45B3temVd9v/view?usp=drive_link)
 
 ## 프로젝트 소개
 
